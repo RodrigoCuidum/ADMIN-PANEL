@@ -47,7 +47,7 @@ const Navbar = () => {
 
           <div className="item">
             <img 
-              src="https://media.gettyimages.com/id/1245712777/es/foto/argentinas-forward-lionel-messi-poses-on-stage-with-the-golden-ball-award-for-best-player.jpg?s=612x612&w=gi&k=20&c=CfMxuzppFfjv8uPzEfYCXCX_9w6viDgX3dy3WV30rn4="
+              src="https://www.chillbs.com/wp-content/uploads/2020/03/jacky-fanart.jpg"
               alt=""
               className="avatar"
             />
