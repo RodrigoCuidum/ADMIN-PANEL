@@ -1,30 +1,36 @@
-import "./navbar.scss"
-import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
-import GTranslateOutlinedIcon from '@mui/icons-material/GTranslateOutlined';
-import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
-import FullscreenExitOutlinedIcon from '@mui/icons-material/FullscreenExitOutlined';
-import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
-import ChatBubbleOutlineOutlinedIcon from '@mui/icons-material/ChatBubbleOutlineOutlined';
-import ListOutlineOutlinedIcon from '@mui/icons-material/ListOutlined';
-
+import "./navbar.scss";
+import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
+import GTranslateOutlinedIcon from "@mui/icons-material/GTranslateOutlined";
+import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
+import FullscreenExitOutlinedIcon from "@mui/icons-material/FullscreenExitOutlined";
+import NotificationsNoneOutlinedIcon from "@mui/icons-material/NotificationsNoneOutlined";
+import ChatBubbleOutlineOutlinedIcon from "@mui/icons-material/ChatBubbleOutlineOutlined";
+import ListOutlineOutlinedIcon from "@mui/icons-material/ListOutlined";
+import { DarkModeContext } from "../../context/darkModeContext";
+import { useContext } from "react";
 
 const Navbar = () => {
+  const { dispatch } = useContext(DarkModeContext);
+
   return (
-    <div className='navbar'>
+    <div className="navbar">
       <div className="wrapper">
         <div className="search">
           <input type="text" placeholder="Search..." />
           <SearchOutlinedIcon />
         </div>
         <div className="items">
-
           <div className="item">
             <GTranslateOutlinedIcon className="icon" />
             English
           </div>
 
           <div className="item">
-            <DarkModeOutlinedIcon className="icon" />
+            <DarkModeOutlinedIcon
+              className="icon"
+              onClick={() => dispatch({ type: "TOGGLE" })}
+              cursor="pointer"
+            />
           </div>
 
           <div className="item">
@@ -46,7 +52,7 @@ const Navbar = () => {
           </div>
 
           <div className="item">
-            <img 
+            <img
               src="https://www.chillbs.com/wp-content/uploads/2020/03/jacky-fanart.jpg"
               alt=""
               className="avatar"
@@ -55,7 +61,7 @@ const Navbar = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

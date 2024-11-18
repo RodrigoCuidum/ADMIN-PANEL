@@ -1,77 +1,69 @@
-export const userInputs = [
-  {
-    id: 1,
-    label: "Username",
-    type: "text",
-    placeholder: "john_doe",
-  },
-  {
-    id: 2,
-    label: "Name and Surname",
-    type: "text",
-    placeholder: "John Doe",
-  },
-  {
-    id: 3,
-    label: "Email",
-    type: "email", // Corregido el tipo
-    placeholder: "john_doe@gmail.com",
-  },
-  {
-    id: 4,
-    label: "Phone",
-    type: "text",
-    placeholder: "+1 234 567 89",
-  },
-  {
-    id: 5,
-    label: "Password",
-    type: "password",
-    placeholder: "Enter your password", // Placeholder añadido
-  },
-  {
-    id: 6,
-    label: "Address",
-    type: "text",
-    placeholder: "Elton St. 216, New York",
-  },
-  {
-    id: 7,
-    label: "Country",
-    type: "text",
-    placeholder: "USA",
-  },
-];
-
-export const productInputs = [
-  {
-    id: 1,
-    label: "Title",
-    type: "text",
-    placeholder: "Apple MacBook Pro",
-  },
-  {
-    id: 2,
-    label: "Description",
-    type: "text",
-    placeholder: "Enter a description",
-  },
-  {
-    id: 3,
-    label: "Category",
-    type: "text",
-    placeholder: "Computers",
-  },
-  {
-    id: 4,
-    label: "Price",
-    type: "number", // Cambiado a tipo `number` para precios
-    placeholder: "100",
-  },
-  {
-    id: 5,
-    label: "Stock",
-    type: "text",
-    placeholder: "In Stock", // Estilo consistente
-  },
-];
+.app.dark {
+    background-color: #111;
+    color: rgb(156, 156, 156);
+  
+    .chartGrid {
+      stroke: rgba(228, 228, 228, 0.219);
+    }
+  
+    .table {
+      background-color: #111;
+  
+      .tableCell {
+        color: gray;
+      }
+    }
+  
+    .navbar {
+      color: #999;
+      border-color: #333;
+  
+      .search {
+        border-color: gray;
+      }
+    }
+  
+    .sidebar {
+      background-color: #111;
+      border-color: #333;
+  
+      .top {
+        .logo {
+          color: #999;
+        }
+      }
+      hr {
+        border-color: #333;
+      }
+  
+      ul {
+        li {
+          &:hover {
+            background-color: #333;
+          }
+  
+          .icon {
+            color: #999;
+          }
+        }
+      }
+    }
+  
+    .datatable {
+      .datagrid {
+        color: gray;
+        border: none;
+  
+        .viewButton,
+        .deleteButton,
+        .cellWithStatus {
+          color: gray;
+          border: none;
+        }
+      }
+    }
+  
+    input{
+        background-color: transparent;
+    }
+  }
